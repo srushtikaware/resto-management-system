@@ -1,1 +1,30 @@
-next sem projects
+#defining the menu of resto
+menu = {
+'pizza':40,
+'pasta':50,
+'burger':60,
+'salad':70,
+'coffee':80
+
+}
+#greeet
+print("welcome to the PY resto")
+print("Pizza:Rs 40\n Pasta:Rs 50 \n Burger:Rs 60 \n Salad:Rs 70\nCoffee:Rs 80")
+order_total=0
+dish_1=input("enter the name of dish you want to order=")
+if dish_1 in menu:
+    order_total +=menu[dish_1]  #0+40=40
+    print(f"your dish  {dish_1} has been added to your order")
+else:    
+    print("orderd dish {dish_1} is not avaialable yet!")
+another_order = input("do you want to add another dish? (yes/no)")
+if another_order == "yes":
+    dish_2 = input("enter the name of second  dish you want to order=")
+    if dish_2 in menu:
+        order_total += menu[dish_2]  #40+50=90
+        print(f"your dish {dish_2} has been added to your order")
+    else:
+        print(f"ordered dish {dish_2} is not available yet!")
+print(f"the total order amount is Rs {order_total}")
+
+print("Thank you for visiting PY Resto 😊")
